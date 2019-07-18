@@ -61,7 +61,7 @@ for i in tweetlist:
 	blob1 = TextBlob(i)
 	polar1 = blob1.polarity
 	polarityList.append(polar1)
-# print(polarityList)
+print(polarityList)
 
 list1 = []
 for i in range(len(tweetData)):
@@ -76,31 +76,31 @@ tweetstring = " "
 for tweet in tweetlist:
 	tweet = tweet + " "
 	tweetstring += tweet
-print(tweetstring)
+# print(tweetstring)
 
+'''
+# Word Cloud
 text = "hello hello there its me fion fion"
-wordcloud = WordCloud().generate(text)
-
+wordcloud = WordCloud(height = 1000, width = 1000).generate(tweetstring)
+plt.figure(figsize = (10, 10), facecolor = None)
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
 plt.show()
-plt.savefig('alischart.png')
+plt.savefig('fionschart.png')
+'''
 
-
-n, bins, patches = plt.hist(polarityList, 50, normed=1, facecolor='g', alpha=0.75)
+n, bins, patches = plt.hist(polarityList)
+print(min(polarityList), max(polarityList))
+plt.axis([-0.55, 1.05, 0.0, 50])
 
 
 plt.xlabel('Smarts')
 plt.ylabel('Probability')
 plt.title('Histogram of IQ')
 plt.text(60, .025, r'$\mu=100,\ \sigma=15$')
-plt.axis([40, 160, 0, 0.03])
-plt.grid(True)
+# plt.grid()
 plt.show()
-
-
-
-
+plt.savefig('fionschart.png')
 # We then print the data of ONE tweet:
 # the [0] denotes the *first* tweet object.
 # We access parts of the tweet using ["NameOfPart"].
