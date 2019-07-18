@@ -7,7 +7,7 @@
 #     "Gigi":20
 #     }
 # print(friends)
-# print(friends["Gigi"])
+# print(friends["Gigi"])hjghjgh
 #
 import json
 
