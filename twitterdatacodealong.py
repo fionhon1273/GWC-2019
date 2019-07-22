@@ -61,7 +61,7 @@ for i in tweetlist:
 	blob1 = TextBlob(i)
 	polar1 = blob1.polarity
 	polarityList.append(polar1)
-print(polarityList)
+# print(polarityList)
 
 list1 = []
 for i in range(len(tweetData)):
@@ -72,11 +72,53 @@ for i in range(len(tweetData)):
 	list1.append(dictionaree)
 # print(tweetData)
 
+
+
+def wordCount(stringOfTweet, string1):
+	counter = 0
+	string1 = string1.lower()
+	wordList = stringOfTweet.split(' ')
+	for i in wordList:
+		if i == string1:
+			counter += 1
+	return counter
+
+wordCountList = []
+for i in tweetlist:
+	wordoccurence = wordCount(i, "the")
+	wordCountList.append(wordoccurence)
+
+print(wordCountList)
+print(min(wordCountList), max(wordCountList))
+plt.hist(wordCountList)
+plt.show()
+
+
+#String of the Tweets
 tweetstring = " "
 for tweet in tweetlist:
 	tweet = tweet + " "
 	tweetstring += tweet
 # print(tweetstring)
+
+
+
+'''
+def countLetter(string, letter):
+	counter = 0
+	for let in string:
+		if let.lower() == letter:
+			counter += 1
+	# print(counter)
+	return (counter)
+
+countLetter(tweetstring, "a")
+alpha = "qwertyuiopasdfghjklzxcvbnm"
+letters = sorted(alpha)
+
+for letter in letters:
+	print(f"letter:{letter} occurences:{countLetter(tweetstring, letter)}")
+'''
 
 '''
 # Word Cloud
@@ -88,19 +130,26 @@ plt.axis("off")
 plt.show()
 plt.savefig('fionschart.png')
 '''
+'''
+occurences = []
+for letter in letters:
+	occurences.append(countLetter(tweetstring, letter))
+'''
 
-n, bins, patches = plt.hist(polarityList)
-print(min(polarityList), max(polarityList))
-plt.axis([-0.55, 1.05, 0.0, 50])
-
-
+# n, bins, patches = plt.hist(countLetter)
+'''
+print(occurences)
+print(min(occurences), max(occurences))
+plt.hist(occurences)
+plt.axis([min(occurences), max(occurences), 0, 10])
 plt.xlabel('Smarts')
 plt.ylabel('Probability')
-plt.title('Histogram of IQ')
+plt.title('Histogram')
 plt.text(60, .025, r'$\mu=100,\ \sigma=15$')
 # plt.grid()
 plt.show()
 plt.savefig('fionschart.png')
+'''
 # We then print the data of ONE tweet:
 # the [0] denotes the *first* tweet object.
 # We access parts of the tweet using ["NameOfPart"].
