@@ -21,18 +21,18 @@ console.log("Hello World!")
 //   i += 1;
 // }
 
-// var fontz= ["'Bonbon', cursive;" "'Butcherman', cursive;" "'Bungee Outline', cursive;" "'Butterfly Kids', cursive;"];
-//
-// var foz= document.getElementById("fontz")
-// var poz= 0;
-//
-// function fontChange(){
-//   foz.setAttribute("style", `font-family;${fontz[poz]}`);
-//   poz ++;
-//   if (poz >= fonts.length){
-//     poz = 0;
-//   }
-// }
+var fontz= ["'Bonbon', cursive;", "'Butcherman', cursive;", "'Bungee Outline', cursive;", "'Butterfly Kids', cursive;"];
+
+var foz= document.getElementById("fontz")
+var poz= 0;
+
+function fontChange(){
+  foz.setAttribute("style", `font-family;${fontz[poz]}`);
+  poz ++;
+  if (poz >= fontz.length){
+    poz = 0;
+  }
+}
 
 
 // Math.random()
@@ -62,15 +62,19 @@ console.log("Hello World!")
 //     return 100;
 //   }
 // }
-//
+// 
 // console.log(getTemp2("f"))
 // console.log(getTemp2("c"))
 
 
-document.getElementById("specialfont").addEventListener("click",
-  function (){
-    document.getElementById("specialfont").style.color = "red";
-  }
-)
+// document.getElementById("specialfont").addEventListener("click",
+//   function (){
+//     document.getElementById("specialfont").style.color = "red";
+//   }
+// )
 
-document.getElementById
+// document.getElementById("specialcolor").addEventListener("click",
+//   function (){
+//     document.getElementById("specialcolor").style.background-color =
+//   }
+// )
