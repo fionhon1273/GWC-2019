@@ -1,7 +1,7 @@
 console.log("Hello World!")
 
 
-LOOPS
+// LOOPS
 // var i = 0;
 // for (i = 0; i <= 20; i+= 2) {
 //   console.log(i);
@@ -21,19 +21,19 @@ LOOPS
 //   i += 1;
 // }
 
-var fontz= ["Hanalei, cursive", "Fascinate, cursive", "Lobster, cursive"]
+// var fontz= ["'Bonbon', cursive;" "'Butcherman', cursive;" "'Bungee Outline', cursive;" "'Butterfly Kids', cursive;"];
+//
+// var foz= document.getElementById("fontz")
+// var poz= 0;
+//
+// function fontChange(){
+//   foz.setAttribute("style", `font-family;${fontz[poz]}`);
+//   poz ++;
+//   if (poz >= fonts.length){
+//     poz = 0;
+//   }
+// }
 
-var poz = 0;
-
-var loz = document.getElementById("fontz")
-
-function changeFontz(){
-  loc.innerHTML = fontz[poz];
-  poz ++;
-  if (poz >= fontz.length){
-    poz = 0;
-  }
-}
 
 // Math.random()
 //
@@ -62,6 +62,15 @@ function changeFontz(){
 //     return 100;
 //   }
 // }
+//
+// console.log(getTemp2("f"))
+// console.log(getTemp2("c"))
 
-console.log(getTemp2("f"))
-console.log(getTemp2("c"))
+
+document.getElementById("specialfont").addEventListener("click",
+  function (){
+    document.getElementById("specialfont").style.color = "red";
+  }
+)
+
+document.getElementById
