@@ -1,4 +1,4 @@
-console.log("Hello World!")
+// console.log("Hello World!")
 
 
 // LOOPS
@@ -21,20 +21,21 @@ console.log("Hello World!")
 //   i += 1;
 // }
 
-var fontz= ["'Bonbon', cursive;", "'Butcherman', cursive;", "'Bungee Outline', cursive;", "'Butterfly Kids', cursive;"];
+
+
+var fontz= ["'Bonbon', cursive", "'Butcherman', cursive", "'Bungee Outline', cursive", "'Butterfly Kids', cursive"];
 
 var foz= document.getElementById("fontz")
 var poz= 0;
 
 function fontChange(){
-  foz.setAttribute("style", `font-family;${fontz[poz]}`);
+  foz.style.fontFamily = fontz[poz];
+  // foz.setAttribute("style", `font-family;${fontz[poz]}`);
   poz ++;
   if (poz >= fontz.length){
     poz = 0;
   }
 }
-
-
 // Math.random()
 //
 // var x = document.getElementsByTagName("body")[0]
@@ -62,7 +63,7 @@ function fontChange(){
 //     return 100;
 //   }
 // }
-// 
+//
 // console.log(getTemp2("f"))
 // console.log(getTemp2("c"))
 
